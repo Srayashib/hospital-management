@@ -1,0 +1,217 @@
+/* =====================================================
+   PATIENT LAYOUT
+===================================================== */
+
+.patient-layout {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.patient-main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+/* =====================================================
+   DESKTOP
+   Sidebar width = 18rem / 288px
+===================================================== */
+
+@media (min-width: 1024px) {
+
+  .patient-main {
+    margin-left: 18rem;
+    width: calc(100% - 18rem);
+  }
+
+}
+
+
+/* =====================================================
+   PATIENT DASHBOARD
+===================================================== */
+
+.patient-dashboard-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f8fafc;
+}
+
+
+/* =====================================================
+   DASHBOARD CONTAINER
+===================================================== */
+
+.patient-dashboard-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+
+/* =====================================================
+   DASHBOARD GRID
+===================================================== */
+
+.patient-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 24px;
+}
+
+
+/* =====================================================
+   MAIN COLUMN
+===================================================== */
+
+.patient-dashboard-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/* =====================================================
+   SIDE COLUMN
+===================================================== */
+
+.patient-dashboard-side {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .patient-dashboard-container {
+    padding: 24px;
+  }
+
+  .patient-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 1023px) {
+
+  .patient-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .patient-dashboard-container {
+    padding: 20px 16px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .patient-dashboard-container {
+    padding: 16px 12px;
+  }
+
+}
+/* =====================================================
+   PATIENT LAYOUT
+===================================================== */
+
+.patient-layout {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.patient-main {
+  min-height: 100vh;
+  margin-left: 18rem;
+  width: calc(100% - 18rem);
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.patient-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 48px;
+
+  padding: 0 1rem;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  font-size: 13px;
+}
+
+
+.patient-breadcrumb-home {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+
+.patient-breadcrumb-separator {
+  color: #cbd5e1;
+}
+
+
+.patient-breadcrumb-current {
+  color: #0284c7;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 1023px) {
+
+  .patient-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .patient-breadcrumb {
+    min-height: 44px;
+    padding: 0 1rem;
+    font-size: 12px;
+  }
+
+}

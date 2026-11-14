@@ -1,0 +1,895 @@
+/* ===========================================
+   PAGE
+=========================================== */
+
+.doctor-page{
+    width:100%;
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.doctor-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.doctor-title h2{
+    font-size:30px;
+    font-weight:700;
+    color:#0f172a;
+    margin-bottom:5px;
+}
+
+.doctor-title p{
+    color:#64748b;
+    font-size:15px;
+}
+
+/* ===========================================
+   ADD BUTTON
+=========================================== */
+
+.add-doctor-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    border:none;
+    outline:none;
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#38bdf8,#0284c7);
+
+    color:#fff;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 12px 25px rgba(2,132,199,.25);
+}
+
+.add-doctor-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 35px rgba(2,132,199,.35);
+}
+
+/* ===========================================
+   FORM CARD
+=========================================== */
+
+.doctor-form-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    border:1px solid #e2e8f0;
+    box-shadow:0 20px 40px rgba(15,23,42,.05);
+}
+
+/* ===========================================
+   FORM TITLE
+=========================================== */
+
+.form-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:24px;
+    font-weight:700;
+
+    color:#0284c7;
+
+    margin-bottom:30px;
+}
+
+/* ===========================================
+   GRID
+=========================================== */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.full-width{
+    grid-column:1 / -1;
+}
+
+/* ===========================================
+   INPUT GROUP
+=========================================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#334155;
+}
+
+/* ===========================================
+   INPUT WRAPPER
+=========================================== */
+
+.input-wrapper{
+    display:flex;
+    align-items:center;
+
+    background:#fff;
+
+    border:1px solid #dbe4ea;
+
+    border-radius:14px;
+
+    padding:0 16px;
+
+    transition:.3s;
+}
+
+.input-wrapper:hover{
+    border-color:#7dd3fc;
+}
+
+.input-wrapper:focus-within{
+    border-color:#0ea5e9;
+    box-shadow:0 0 0 5px rgba(14,165,233,.12);
+}
+
+.input-icon{
+    color:#38bdf8;
+    font-size:18px;
+    min-width:20px;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+
+    padding:15px 14px;
+
+    font-size:15px;
+    color:#1e293b;
+
+    resize:none;
+}
+
+.input-wrapper textarea{
+    min-height:120px;
+}
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder{
+    color:#94a3b8;
+}
+
+/* ===========================================
+   ERROR
+=========================================== */
+
+.error-text{
+    color:#ef4444;
+    font-size:13px;
+    margin-top:6px;
+}
+
+/* ===========================================
+   FORM BUTTONS
+=========================================== */
+
+.form-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+
+    margin-top:35px;
+}
+
+.cancel-btn{
+    border:none;
+    outline:none;
+
+    padding:14px 25px;
+
+    border-radius:12px;
+
+    background:#e2e8f0;
+
+    color:#334155;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.cancel-btn:hover{
+    background:#cbd5e1;
+}
+
+.save-btn{
+    border:none;
+    outline:none;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#38bdf8,#0284c7);
+
+    color:white;
+
+    font-weight:600;
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 12px 24px rgba(2,132,199,.25);
+}
+
+.save-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 20px 35px rgba(2,132,199,.35);
+}
+
+.save-btn:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
+
+/* ===========================================
+   UPLOAD
+=========================================== */
+
+.image-upload{
+    border:2px dashed #bae6fd;
+    border-radius:16px;
+    padding:30px;
+    text-align:center;
+    background:#f8fdff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.image-upload:hover{
+    border-color:#38bdf8;
+    background:#f0f9ff;
+}
+
+.image-upload p{
+    margin-top:10px;
+    color:#64748b;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.form-grid{
+    grid-template-columns:1fr;
+}
+
+.full-width{
+    grid-column:auto;
+}
+
+}
+
+@media(max-width:768px){
+
+.doctor-header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.add-doctor-btn{
+    width:100%;
+    justify-content:center;
+}
+
+.doctor-form-card{
+    padding:25px;
+}
+
+.form-buttons{
+    flex-direction:column;
+}
+
+.cancel-btn,
+.save-btn{
+    width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+.doctor-title h2{
+    font-size:24px;
+}
+
+.form-title{
+    font-size:20px;
+}
+
+.doctor-form-card{
+    padding:20px;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea{
+    padding:13px 10px;
+    font-size:14px;
+}
+
+}
+/* ======================================================
+   ADD DOCTOR NEW DESIGN (KEEP EXISTING CSS)
+====================================================== */
+
+.doctor-page{
+    width:100%;
+    padding:20px;
+}
+
+.doctor-card{
+    background:#fff;
+    border-radius:24px;
+    padding:35px;
+    border:1px solid #e5eef5;
+    box-shadow:0 20px 50px rgba(15,23,42,.06);
+}
+
+.doctor-header{
+    margin-bottom:35px;
+}
+
+.doctor-header h2{
+    font-size:30px;
+    font-weight:700;
+    color:#0284c7;
+    margin-bottom:8px;
+}
+
+.doctor-header p{
+    color:#64748b;
+    font-size:15px;
+}
+
+.section-title{
+    font-size:20px;
+    font-weight:700;
+    color:#0f172a;
+    margin:35px 0 20px;
+    padding-bottom:10px;
+    border-bottom:1px solid #e2e8f0;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:22px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#334155;
+}
+
+/* ===========================
+   INPUT BOX
+=========================== */
+
+.input-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:#fff;
+
+    border:1px solid #dbe6ee;
+
+    border-radius:14px;
+
+    padding:0 16px;
+
+    transition:.3s;
+}
+
+.input-box:hover{
+    border-color:#7dd3fc;
+}
+
+.input-box:focus-within{
+    border-color:#0ea5e9;
+    box-shadow:0 0 0 5px rgba(14,165,233,.12);
+}
+
+.input-box svg{
+    color:#38bdf8;
+    font-size:18px;
+    min-width:18px;
+}
+
+.input-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:15px 0;
+    font-size:15px;
+    color:#1e293b;
+}
+
+.input-box input::placeholder{
+    color:#94a3b8;
+}
+
+/* ===========================
+   NORMAL INPUT
+=========================== */
+
+.form-group>input,
+.form-group>select,
+.form-group>textarea{
+    width:100%;
+    border:1px solid #dbe6ee;
+    border-radius:14px;
+    outline:none;
+    padding:15px;
+    font-size:15px;
+    transition:.3s;
+    background:#fff;
+}
+
+.form-group>input:focus,
+.form-group>select:focus,
+.form-group>textarea:focus{
+    border-color:#0ea5e9;
+    box-shadow:0 0 0 5px rgba(14,165,233,.12);
+}
+
+/* ===========================
+   ERROR
+=========================== */
+
+.error-text{
+    display:block;
+    margin-top:7px;
+    color:#ef4444;
+    font-size:13px;
+    font-weight:500;
+}
+
+/* ===========================
+   UPLOAD
+=========================== */
+
+.upload-box{
+    width:100%;
+    height:55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    border:2px dashed #7dd3fc;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    background:#f8fcff;
+
+    color:#0284c7;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.upload-box:hover{
+    background:#eef9ff;
+    border-color:#0ea5e9;
+}
+
+.upload-box svg{
+    font-size:18px;
+}
+
+/* ===========================
+   IMAGE PREVIEW
+=========================== */
+
+.preview{
+    margin-top:15px;
+
+    width:170px;
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:4px solid #fff;
+
+    box-shadow:
+        0 10px 30px rgba(2,132,199,.18);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.save-btn{
+    margin-top:35px;
+
+    width:100%;
+    height:56px;
+
+    border:none;
+    outline:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#38bdf8,#0284c7);
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 30px rgba(2,132,199,.22);
+}
+
+.save-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 22px 40px rgba(2,132,199,.32);
+}
+
+.save-btn:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+.grid-2{
+    gap:18px;
+}
+
+}
+
+@media(max-width:992px){
+
+.doctor-card{
+    padding:28px;
+}
+
+.grid-2{
+    grid-template-columns:1fr;
+}
+
+.preview{
+    width:150px;
+    height:150px;
+}
+
+}
+
+@media(max-width:768px){
+
+.doctor-page{
+    padding:15px;
+}
+
+.doctor-card{
+    padding:22px;
+    border-radius:18px;
+}
+
+.doctor-header h2{
+    font-size:25px;
+}
+
+.section-title{
+    font-size:18px;
+}
+
+.input-box{
+    padding:0 14px;
+}
+
+.input-box input{
+    padding:14px 0;
+    font-size:14px;
+}
+
+.form-group>input,
+.form-group>select,
+.form-group>textarea{
+    padding:14px;
+    font-size:14px;
+}
+
+.save-btn{
+    height:52px;
+    font-size:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.doctor-page{
+    padding:10px;
+}
+
+.doctor-card{
+    padding:18px;
+}
+
+.doctor-header h2{
+    font-size:22px;
+}
+
+.doctor-header p{
+    font-size:14px;
+}
+
+.section-title{
+    font-size:17px;
+}
+
+.input-box{
+    gap:10px;
+    border-radius:12px;
+}
+
+.input-box svg{
+    font-size:16px;
+}
+
+.input-box input{
+    font-size:14px;
+}
+
+.form-group>input,
+.form-group>select,
+.form-group>textarea{
+    font-size:14px;
+}
+
+.upload-box{
+    height:52px;
+    font-size:14px;
+}
+
+.preview{
+    width:120px;
+    height:120px;
+}
+
+.save-btn{
+    height:50px;
+    font-size:15px;
+}
+
+}
+/* ===========================
+   Doctors Table
+=========================== */
+
+.doctors-table-wrapper {
+  overflow-x: auto;
+}
+
+.doctors-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.doctors-table thead {
+  background: #f8fafc;
+}
+
+.doctors-table thead th {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.doctors-table tbody td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 14px;
+  color: #475569;
+  vertical-align: middle;
+}
+
+.doctors-table tbody tr {
+  transition: all 0.25s ease;
+}
+
+.doctors-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.doctors-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.doctors-table-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+
+.doctors-table-status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.doctors-table-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.doctors-table-status.inactive {
+  background: #fee2e2;
+  color: #dc2626;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.doctor-form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.save-btn {
+  flex: 1;
+}
+
+.cancel-btn {
+  margin-top:35px;
+
+    width:20%;
+    height:56px;
+
+    border:none;
+    outline:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#3865f8,#0284c7);
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 30px rgba(2,132,199,.22);
+}
+
+.cancel-btn:hover {
+  background: #051f44;
+}
+.image-preview-wrapper{
+    position: relative;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.preview{
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+    object-fit: cover;
+    border:2px solid #e5e7eb;
+}
+
+.remove-image-btn{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+
+    width:28px;
+    height:28px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#ef4444;
+    color:#fff;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.2s;
+}
+
+.remove-image-btn:hover{
+    background:#dc2626;
+    transform:scale(1.08);
+}

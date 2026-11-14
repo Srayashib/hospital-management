@@ -1,0 +1,997 @@
+/* =====================================================
+   RECEPTIONIST LAYOUT
+===================================================== */
+
+.receptionist-layout {
+  min-height: 100vh;
+  background: #f5f7fb;
+  display: flex;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.receptionist-sidebar {
+  width: 260px;
+  height: 100vh;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e8ebf2;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+}
+
+
+.receptionist-sidebar-brand {
+  height: 82px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+
+.receptionist-brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+
+.receptionist-sidebar-brand h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #172033;
+}
+
+
+.receptionist-sidebar-brand span {
+  font-size: 11px;
+  color: #8a93a5;
+}
+
+
+.receptionist-sidebar-nav {
+  padding: 24px 14px;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+
+.receptionist-nav-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #a0a7b5;
+  letter-spacing: 1px;
+  margin: 18px 12px 8px;
+}
+
+
+.receptionist-nav-link {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 14px;
+  margin-bottom: 4px;
+  border-radius: 10px;
+  color: #687386;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+
+.receptionist-nav-link svg {
+  width: 16px;
+}
+
+
+.receptionist-nav-link:hover {
+  background: #f1f5ff;
+  color: #2563eb;
+}
+
+
+.receptionist-nav-link.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.2);
+}
+
+
+.receptionist-sidebar-bottom {
+  padding: 18px;
+  border-top: 1px solid #edf0f5;
+}
+
+
+.receptionist-logout-btn {
+  width: 100%;
+  height: 44px;
+  border: none;
+  background: #fdbfbf;
+  color: #e05252;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.receptionist-logout-btn:hover {
+  background: #6c0404;
+  color: #f8f6f6;
+}
+
+.receptionist-logout-btn svg {
+  width: 16px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.receptionist-main {
+  width: calc(100% - 260px);
+  margin-left: 260px;
+  min-height: 100vh;
+}
+
+
+.receptionist-dashboard-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.receptionist-header {
+  height: 82px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8ebf2;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.receptionist-header-search {
+  width: 360px;
+  height: 42px;
+  background: #f6f8fb;
+  border: 1px solid #edf0f5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  color: #9aa2b1;
+}
+
+
+.receptionist-header-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+
+.receptionist-header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.receptionist-notification-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: #f5f7fb;
+  border-radius: 10px;
+  color: #626d80;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.receptionist-notification-dot {
+  width: 7px;
+  height: 7px;
+  background: #ef4444;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border: 2px solid #ffffff;
+}
+
+
+.receptionist-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.receptionist-user-icon {
+  font-size: 38px;
+  color: #2563eb;
+}
+
+
+.receptionist-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.receptionist-user-info strong {
+  color: #20293a;
+  font-size: 13px;
+}
+
+
+.receptionist-user-info span {
+  color: #969ead;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+
+/* =====================================================
+   DASHBOARD CONTAINER
+===================================================== */
+
+.receptionist-dashboard-container {
+  padding: 30px 32px;
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.receptionist-welcome {
+  background: linear-gradient(
+    120deg,
+    #2563eb,
+    #3b82f6
+  );
+  border-radius: 18px;
+  padding: 28px 30px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+
+.receptionist-welcome-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+}
+
+
+.receptionist-welcome h1 {
+  font-size: 25px;
+  margin: 8px 0;
+}
+
+
+.receptionist-welcome p {
+  margin: 0;
+  opacity: 0.82;
+  font-size: 13px;
+}
+
+
+.receptionist-welcome-date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.12);
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
+
+.receptionist-welcome-date svg {
+  font-size: 20px;
+}
+
+
+.receptionist-welcome-date div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.receptionist-welcome-date span {
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+
+.receptionist-welcome-date strong {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.receptionist-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+
+.receptionist-stat-card {
+  background: #ffffff;
+  border: 1px solid #e9edf4;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+
+.receptionist-stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.receptionist-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #eff5ff;
+  color: #2563eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.receptionist-stat-change {
+  font-size: 11px;
+  color: #16a36a;
+  font-weight: 600;
+}
+
+
+.receptionist-stat-title {
+  display: block;
+  color: #818a9b;
+  font-size: 12px;
+  margin-top: 16px;
+}
+
+
+.receptionist-stat-value {
+  display: block;
+  color: #1e2738;
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+
+/* =====================================================
+   QUICK ACTIONS
+===================================================== */
+
+.receptionist-quick-section {
+  margin-bottom: 26px;
+}
+
+
+.receptionist-section-heading h2,
+.receptionist-card-heading h2,
+.receptionist-chart-header h2,
+.receptionist-payment-header h2 {
+  margin: 0;
+  color: #1e2738;
+  font-size: 17px;
+}
+
+
+.receptionist-section-heading p,
+.receptionist-card-heading p,
+.receptionist-chart-header p,
+.receptionist-payment-header p {
+  margin: 5px 0 0;
+  color: #8b94a4;
+  font-size: 11px;
+}
+
+
+.receptionist-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 15px;
+}
+
+
+.receptionist-quick-card {
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 13px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+
+.receptionist-quick-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37,99,235,0.08);
+}
+
+
+.receptionist-quick-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 9px;
+  background: #eff5ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.receptionist-quick-title {
+  color: #364154;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   DASHBOARD GRID
+===================================================== */
+
+.receptionist-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 20px;
+}
+
+
+.receptionist-dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.receptionist-dashboard-side {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.receptionist-chart-card,
+.receptionist-appointments-card,
+.receptionist-patients-card,
+.receptionist-payment-card {
+  background: #ffffff;
+  border: 1px solid #e8edf4;
+  border-radius: 15px;
+  padding: 22px;
+}
+
+
+.receptionist-chart-header,
+.receptionist-card-heading,
+.receptionist-payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+/* =====================================================
+   CHART
+===================================================== */
+
+.receptionist-chart-select {
+  border: 1px solid #e1e6ee;
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 7px 10px;
+  color: #667085;
+  font-size: 11px;
+  outline: none;
+}
+
+
+.receptionist-chart {
+  height: 250px;
+  display: flex;
+  margin-top: 25px;
+}
+
+
+.receptionist-chart-y {
+  width: 35px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #a1a8b5;
+  font-size: 9px;
+}
+
+
+.receptionist-chart-bars {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 15px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+
+.receptionist-chart-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.receptionist-chart-bar-wrapper {
+  height: 200px;
+  width: 28px;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.receptionist-chart-bar {
+  width: 100%;
+  min-height: 8px;
+  background: #3b82f6;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+
+.receptionist-chart-bar:hover {
+  background: #1d4ed8;
+}
+
+
+.receptionist-chart-bar span {
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: #667085;
+}
+
+
+.receptionist-chart-day {
+  font-size: 10px;
+  color: #8b94a4;
+  margin-top: 10px;
+}
+
+
+/* =====================================================
+   APPOINTMENTS
+===================================================== */
+
+.receptionist-view-all-btn {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.receptionist-appointment-list {
+  margin-top: 18px;
+}
+
+
+.receptionist-appointment-row {
+  min-height: 65px;
+  border-top: 1px solid #f0f2f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+.receptionist-appointment-patient {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+
+.receptionist-patient-avatar {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  background: #eff5ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.receptionist-appointment-patient div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.receptionist-appointment-patient strong {
+  color: #30394a;
+  font-size: 12px;
+}
+
+
+.receptionist-appointment-patient span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #9199a8;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+
+.receptionist-appointment-time {
+  color: #687386;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.receptionist-status {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: 20px;
+}
+
+
+.receptionist-status-checked-in {
+  background: #e9f9f1;
+  color: #17915c;
+}
+
+
+.receptionist-status-waiting {
+  background: #fff6df;
+  color: #b77a08;
+}
+
+
+.receptionist-status-confirmed {
+  background: #edf4ff;
+  color: #2563eb;
+}
+
+
+/* =====================================================
+   PATIENTS
+===================================================== */
+
+.receptionist-patient-list {
+  margin-top: 18px;
+}
+
+
+.receptionist-patient-row {
+  min-height: 65px;
+  border-top: 1px solid #f0f2f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+.receptionist-patient-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+
+.receptionist-patient-left div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.receptionist-patient-left strong {
+  color: #30394a;
+  font-size: 12px;
+}
+
+
+.receptionist-patient-left span {
+  color: #969eac;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+
+.receptionist-patient-phone {
+  color: #778092;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.receptionist-patient-visit {
+  font-size: 10px;
+  color: #8b94a4;
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.receptionist-payment-card {
+  min-height: 280px;
+}
+
+
+.receptionist-payment-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #ecfdf5;
+  color: #16a36a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.receptionist-payment-total {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e2738;
+  margin-top: 30px;
+}
+
+
+.receptionist-payment-growth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 10px;
+  color: #16a36a;
+}
+
+
+.receptionist-payment-growth span {
+  color: #969eac;
+}
+
+
+.receptionist-payment-breakdown {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f5;
+}
+
+
+.receptionist-payment-breakdown div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+
+.receptionist-payment-breakdown span {
+  color: #8b94a4;
+  font-size: 11px;
+}
+
+
+.receptionist-payment-breakdown strong {
+  color: #344054;
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .receptionist-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .receptionist-quick-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+@media (max-width: 950px) {
+
+  .receptionist-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .receptionist-sidebar {
+    width: 70px;
+  }
+
+  .receptionist-sidebar-brand {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .receptionist-sidebar-brand div:last-child,
+  .receptionist-nav-title,
+  .receptionist-nav-link span,
+  .receptionist-logout-btn span {
+    display: none;
+  }
+
+  .receptionist-nav-link {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .receptionist-sidebar-bottom {
+    padding: 12px;
+  }
+
+  .receptionist-main {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+
+  .receptionist-header {
+    padding: 0 18px;
+  }
+
+  .receptionist-header-search {
+    width: 220px;
+  }
+
+  .receptionist-dashboard-container {
+    padding: 20px;
+  }
+
+  .receptionist-welcome {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .receptionist-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .receptionist-quick-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .receptionist-header-search {
+    display: none;
+  }
+
+  .receptionist-user-info {
+    display: none;
+  }
+
+  .receptionist-header-right {
+    margin-left: auto;
+  }
+
+  .receptionist-dashboard-container {
+    padding: 15px;
+  }
+
+  .receptionist-welcome {
+    padding: 22px;
+  }
+
+  .receptionist-welcome h1 {
+    font-size: 20px;
+  }
+
+  .receptionist-appointment-row,
+  .receptionist-patient-row {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  .receptionist-quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
